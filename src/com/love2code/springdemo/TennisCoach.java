@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach{
 
+    @Autowired
     private FortuneService fortuneService;
 
     public TennisCoach() {
@@ -20,12 +21,5 @@ public class TennisCoach implements Coach{
     @Override
     public String getDailyFortune(){
         return fortuneService.getFortune();
-    }
-
-    // define a setter method for dependency injection
-    @Autowired
-    public void randomMeethodForDI(FortuneService fortuneService) {
-        System.out.println(">> TennisCoach: inside setFortuneService()");
-        this.fortuneService = fortuneService;
     }
 }
