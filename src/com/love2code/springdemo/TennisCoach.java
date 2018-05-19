@@ -8,14 +8,6 @@ public class TennisCoach implements Coach{
 
     private FortuneService fortuneService;
 
-//    @Autowired
-//    public TennisCoach(FortuneService fortuneService) {
-//        this.fortuneService = fortuneService;
-//    }
-
-    // define a defualt constructor
-
-
     public TennisCoach() {
         System.out.println(">> TennisCoach: inside default constructor");
     }
@@ -32,7 +24,7 @@ public class TennisCoach implements Coach{
 
     // define a setter method for dependency injection
     @Autowired
-    public void setFortuneService(FortuneService fortuneService) {
+    public void randomMeethodForDI(FortuneService fortuneService) {
         System.out.println(">> TennisCoach: inside setFortuneService()");
         this.fortuneService = fortuneService;
     }
